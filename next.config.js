@@ -5,4 +5,11 @@ const nextConfig = {
   },
 }
 
+module.exports = {
+  images: {
+    domains: ['cdn.sanity.io'],
+    loader: 'custom'
+  }
+};
+
 module.exports = nextConfig
