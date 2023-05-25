@@ -1,9 +1,8 @@
 
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-import { StateContext } from "./context/StateContext"
-import Toaster from "./Toaster"
-
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import { StateContext } from "./context/StateContext";
+import Toaster from "./Toaster";
 
 export default function RootLayout({ children }) {
   return (
@@ -26,6 +25,5 @@ export default function RootLayout({ children }) {
         </StateContext>
       </body>
     </html>
-
-  )
-}
+  );
+};

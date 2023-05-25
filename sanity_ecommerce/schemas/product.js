@@ -18,7 +18,7 @@ export default {
             type: 'string'
         },
         {
-            name: 'slug', //slug is like a url like a unique string
+            name: 'slug',
             title: 'Slug',
             type: 'slug',
             options: {

@@ -56,5 +56,5 @@ export default function Buttons({ product }) {
                 </button>
             </div>
         </>
-    )
-}
+    );
+};

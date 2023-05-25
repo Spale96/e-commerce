@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import React from 'react'
-import { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { urlFor } from '../../../../lib/client';
 
@@ -12,6 +12,8 @@ export default function Images({ image, id }) {
         <>
             <div className='image-container' >
                 <Image
+                    key={id}
+                    id={id}
                     src={urlFor(image && image[index]).width(650).url()}
                     width={350}
                     height={350}

@@ -1,9 +1,9 @@
 
 import './globals.css';
 
-import HeroBanner from './components/HeroBanner'
-import Product from './components/Product'
-import FooterBanner from './components/FooterBanner'
+import HeroBanner from './components/HeroBanner';
+import Product from './components/Product';
+import FooterBanner from './components/FooterBanner';
 
 import { client } from '../lib/client';
 
@@ -49,8 +49,8 @@ export default async function Home({ id }) {
         footerBanner={bannerData && bannerData[0]}
         key={id} />
     </>
-  )
-}
+  );
+};
 
 
 

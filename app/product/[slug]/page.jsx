@@ -1,23 +1,20 @@
-import React from 'react'
+import React from 'react';
 import Product from '../../components/Product';
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { client } from '../../../lib/client';
 import Buttons from './components/Buttons';
 import Images from './components/Images';
 
-
-
 export default async function ProductDetails({ params: { slug } }) {
-    //take everthing from (type) product.
     const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
     const productsQuery = '*[_type == "product"]'
-
-    //individual product
     const product = await client.fetch(query);
 
     const products = await client.fetch(productsQuery);
 
     const { image, name, details, price } = await product;
+
+    console.log(product)
 
     return (
         <div>
@@ -25,7 +22,7 @@ export default async function ProductDetails({ params: { slug } }) {
                 <div>
                     <Images
                         key={product._id}
-                        image={image}
+                        image={product.image}
                     />
                 </div>
                 <div className="product-detail-desc">
