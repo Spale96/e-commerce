@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { urlFor } from '../../lib/client'
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { urlFor } from '../../lib/client';
 
 
 
@@ -42,7 +42,7 @@ const HeroBanner = ({ smallText, midText, largeText, bannerImage, bannerProduct,
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default HeroBanner
+export default HeroBanner;

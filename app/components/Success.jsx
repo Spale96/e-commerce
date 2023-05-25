@@ -44,7 +44,7 @@ const Success = () => {
                 </Link>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Success
+export default Success;

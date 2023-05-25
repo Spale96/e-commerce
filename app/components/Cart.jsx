@@ -1,8 +1,7 @@
-'use client'
+'use client';
 
 import React, { useRef } from 'react'
 import Link from 'next/link';
-
 
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
@@ -65,8 +64,8 @@ const Cart = () => {
                 setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
                 setTotalQuantities(prevTotalQuantities => prevTotalQuantities - 1);
             }
-        }
-    }
+        };
+    };
 
     const onRemove = (product) => {
         foundProduct = cartItems.find((item) => item._id === product._id);
@@ -75,7 +74,7 @@ const Cart = () => {
         setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity);
         setTotalQuantities(prevTotalQuantities => prevTotalQuantities - foundProduct.quantity);
         setCartItems(newCartItems);
-    }
+    };
 
     return (
 
@@ -146,7 +145,7 @@ const Cart = () => {
                 )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Cart
+export default Cart;

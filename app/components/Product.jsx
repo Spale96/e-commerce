@@ -22,7 +22,7 @@ const Product = ({ product: { image, name, slug, price } }) => {
             </Link>
 
         </div >
-    )
-}
+    );
+};
 
-export default Product
+export default Product;

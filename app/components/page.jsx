@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Success from './Success';
 
 const ComponentsPage = () => {
@@ -6,7 +6,7 @@ const ComponentsPage = () => {
         <div className="success-wrapper">
             <Success />
         </div>
-    )
-}
+    );
+};
 
 export default ComponentsPage;
