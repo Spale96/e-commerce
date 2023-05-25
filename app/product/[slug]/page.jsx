@@ -12,9 +12,11 @@ export default async function ProductDetails({ params: { slug } }) {
 
     const products = await client.fetch(productsQuery);
 
-    const { image, name, details, price } = await product;
+    if (!product) {
+        return <div>Loading...</div>;
+    }
 
-    console.log(product)
+    const { image, name, details, price } = await product;
 
     return (
         <div>
@@ -22,7 +24,7 @@ export default async function ProductDetails({ params: { slug } }) {
                 <div>
                     <Images
                         key={product._id}
-                        image={product.image}
+                        image={image}
                     />
                 </div>
                 <div className="product-detail-desc">
@@ -43,9 +45,7 @@ export default async function ProductDetails({ params: { slug } }) {
                     <p>{details}</p>
                     <p className="price">${price}</p>
 
-                    <Buttons
-                        product={product}
-                    />
+                    <Buttons product={product} />
 
                 </div>
 

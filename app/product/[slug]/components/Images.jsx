@@ -8,6 +8,11 @@ import { urlFor } from '../../../../lib/client';
 export default function Images({ image, id }) {
     const [index, setIndex] = useState(0);
 
+    if (!image) {
+        // Handle the case where image is null or undefined
+        return null;
+    }
+
     return (
         <>
             <div className='image-container' >
@@ -34,7 +39,6 @@ export default function Images({ image, id }) {
                         alt='coursel-image'
                         unoptimized={true}
                         onMouseEnter={() => setIndex(i)} />
-
                 ))}
             </div>
         </>
