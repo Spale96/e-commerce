@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -37,4 +37,4 @@ const FooterBanner = ({ footerBanner: { desc, discount, largeText1, largeText2, 
     );
 };
 
-export default FooterBanner;
+export default FooterBanner

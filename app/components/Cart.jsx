@@ -15,7 +15,6 @@ import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../../lib/client';
 import Image from 'next/image';
 
-
 const Cart = () => {
 
     const cartRef = useRef();
@@ -39,13 +38,10 @@ const Cart = () => {
         toast.loading('Redirecting...');
 
         stripe.redirectToCheckout({ sessionId: data.id });
-
-    }
-
+    };
 
     let foundProduct;
     let index;
-
 
     const toggleCartItemQuanitity = (id, value) => {
         foundProduct = cartItems.find((item) => item._id === id)

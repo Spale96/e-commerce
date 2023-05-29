@@ -5,11 +5,12 @@ import { client } from '../../../lib/client';
 import Buttons from './components/Buttons';
 import Images from './components/Images';
 
+
 export default async function ProductDetails({ params: { slug } }) {
     const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
     const productsQuery = '*[_type == "product"]'
-    const product = await client.fetch(query);
 
+    const product = await client.fetch(query);
     const products = await client.fetch(productsQuery);
 
     if (!product) {
@@ -64,9 +65,8 @@ export default async function ProductDetails({ params: { slug } }) {
                 </div>
             </div>
         </div>
-    )
-
-}
+    );
+};
 
 
 

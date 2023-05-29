@@ -3,9 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { urlFor } from '../../lib/client';
 
-
-
 const HeroBanner = ({ smallText, midText, largeText, bannerImage, bannerProduct, bannerButtonText, bannerDesc }) => {
+    console.log(bannerProduct);
     return (
         <>
             <div className='hero-banner-container'>
@@ -27,6 +26,7 @@ const HeroBanner = ({ smallText, midText, largeText, bannerImage, bannerProduct,
                         width={800}
                         height={800}
                         src={urlFor(bannerImage).width(800).url()}
+                        quality={100}
                         alt="headphones"
                         unoptimized={true} />
                 </div>
@@ -35,6 +35,7 @@ const HeroBanner = ({ smallText, midText, largeText, bannerImage, bannerProduct,
                     <Link href={`/product/${bannerProduct}`}>
                         <button type='button'>{bannerButtonText}</button>
                     </Link>
+
                     <div className='desc'>
                         <h5>Description</h5>
                         <p>{bannerDesc}</p>

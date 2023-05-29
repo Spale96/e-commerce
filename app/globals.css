@@ -108,16 +108,20 @@ span.text-red {
     border-radius: 50%;
     text-align: center;
     font-weight: 600;
-
 }
 
 .products-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     gap: 15px;
     margin-top: 20px;
     width: 100%;
+    background-color: #968e8e;
+    border-radius: 25px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .product-card {
@@ -125,7 +129,6 @@ span.text-red {
     transform: scale(1, 1);
     transition: transform 0.5s ease;
     color: #324d67;
-
 }
 
 .product-card:hover {
@@ -141,6 +144,7 @@ span.text-red {
 
 .product-name {
     font-weight: 500;
+    margin-top: 10px;
 }
 
 .product-price {
@@ -151,7 +155,7 @@ span.text-red {
 
 .hero-banner-container {
     padding: 100px 40px;
-    background-color: #dcdcdc;
+    background-color: #3d3c3c;
     border-radius: 15px;
     position: relative;
     height: 500px;
@@ -162,6 +166,7 @@ span.text-red {
 
 .hero-banner-container .beats-solo {
     font-size: 20px;
+    color: #ebebeb;
 }
 
 .hero-banner-container button {
@@ -175,6 +180,11 @@ span.text-red {
     font-weight: 500;
     cursor: pointer;
     z-index: 10000 !important;
+    transition: transform .4s ease;
+}
+
+.hero-banner-container button:hover {
+    transform: scale(1.1);
 }
 
 .hero-banner-container h3 {
@@ -185,7 +195,7 @@ span.text-red {
 .hero-banner-container h1 {
     color: white;
     font-size: 10em;
-    margin-left: -20px;
+    margin-left: -2px;
     text-transform: uppercase;
 }
 
@@ -206,12 +216,11 @@ span.text-red {
     line-height: 1.3;
     display: flex;
     flex-direction: column;
-    color: #324d67;
-
+    color: #434ca0;
 }
 
 .desc p {
-    color: #5f5f5f;
+    color: #a8a7a7;
     font-weight: 100;
     text-align: end;
 }
@@ -220,7 +229,6 @@ span.text-red {
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 16px;
-    /* color: black; */
     align-self: flex-end;
 }
 
@@ -228,7 +236,6 @@ span.text-red {
     text-align: center;
     margin: 40px 0px;
     color: #324d67;
-
 }
 
 .products-heading h2 {
@@ -261,19 +268,30 @@ span.text-red {
 .banner-desc button {
     border-radius: 15px;
     padding: 10px 16px;
-    background-color: white;
+    background-color: #3d3c3c;
     color: red;
     border: none;
     margin-top: 40px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
+    transition: transform .4s ease;
 }
+
+.banner-desc button:hover {
+    transform: scale(1.1);
+}
+
 
 .banner-desc .left h3 {
     font-weight: 900;
-    font-size: 80px;
-    margin-left: 25px;
+    font-size: 50px;
+}
+
+.banner-desc .left h4 {
+    font-weight: 900;
+    font-size: 40px;
+    color: #3d3c3c;
 }
 
 .banner-desc .left p {
@@ -282,8 +300,6 @@ span.text-red {
 
 .footer-banner-image {
     position: absolute;
-    /* top: -35%;
-  left: 8%; */
     top: -15%;
     left: 23%;
 }
@@ -313,7 +329,6 @@ span.text-red {
     right: 0;
     top: 0;
     z-index: 100;
-    /* will-change: transform; */
     transition: all 1s ease-in-out;
 
 }
@@ -478,25 +493,15 @@ span.text-red {
 
 .product-detail-container {
     display: flex;
-    gap: 40px;
+    gap: 50px;
     margin: 40px;
     margin-top: 60px;
     color: #324d67;
-
 }
 
-.product-detail-image {
-    border-radius: 15px;
-    background-color: #ebebeb;
-
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-}
-
-.product-detail-image:hover {
-    background-color: #f02d34;
+.product-detail-container .product-detail-image {
+    width: 350px;
+    height: 350px;
 }
 
 .small-images-container {
@@ -517,6 +522,7 @@ span.text-red {
     background-color: #f02d34 !important;
     background: transparent;
 }
+
 
 .reviews {
     color: #f02d34;
@@ -714,16 +720,11 @@ span.text-red {
     margin-top: 10px;
 }
 
+
+
 @media screen and (max-width:800px) {
     .hero-banner-container {
         height: 560px;
-    }
-
-    .hero-banner-image {
-        width: 77%;
-        height: 62%;
-        top: -2%;
-        right: -6%;
     }
 
     .footer-banner-container {
@@ -731,17 +732,11 @@ span.text-red {
         margin-top: 80px;
     }
 
-    .footer-banner-image {
-        width: 77%;
-        left: 30%;
-        top: 6%;
-        height: 56%
-    }
 
     .banner-desc .left h3 {
         font-weight: 900;
         font-size: 50px;
-        margin-left: 5px;
+        color: #3d3c3c;
     }
 
     .banner-desc .left p {
@@ -761,7 +756,8 @@ span.text-red {
     }
 
     .banner-desc {
-        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
         gap: 20px;
     }
 
@@ -837,8 +833,6 @@ span.text-red {
     .top {
         flex-wrap: wrap;
         gap: 10px;
-
-
     }
 
     .item-desc .bottom {
@@ -893,4 +887,67 @@ span.text-red {
         width: 300px;
         margin: auto;
     }
+}
+
+
+@media screen and (min-width:600px) and (max-width: 972px) {
+    .hero-banner-image {
+        width: 346px;
+        height: 62%;
+        top: 16%;
+        right: 3%;
+    }
+
+    .footer-banner-image {
+        display: none;
+    }
+
+    .product-detail-container {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .product-detail-container .product-detail-image {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width: 600px) {
+    .hero-banner-image {
+        width: 250px;
+        height: 41%;
+        top: 35%;
+        right: 0%;
+    }
+
+    .footer-banner-image {
+        display: none;
+    }
+
+    .products-container {
+        gap: 1px;
+    }
+
+    .product-card {
+        transform: scale(0.8);
+    }
+
+    .product-card:hover {
+        transform: scale(0.9);
+    }
+
+    .product-name {
+        margin-top: -13px;
+    }
+
+    .product-detail-container {
+        justify-content: center;
+    }
+
+    .product-detail-container .product-detail-image {
+        width: 318px;
+        height: 300px;
+    }
+
 }

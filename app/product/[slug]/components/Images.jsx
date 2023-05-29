@@ -9,19 +9,26 @@ export default function Images({ image, id }) {
     const [index, setIndex] = useState(0);
 
     if (!image) {
-        // Handle the case where image is null or undefined
         return null;
-    }
+    };
+
+    const handleImageClick = (i) => {
+        setIndex(i);
+    };
+
+    const handleImageHover = (i) => {
+        setIndex(i);
+    };
 
     return (
         <>
-            <div className='image-container' >
+            <div>
                 <Image
                     key={id}
                     id={id}
-                    src={urlFor(image && image[index]).width(650).url()}
-                    width={350}
-                    height={350}
+                    src={urlFor(image && image[index]).width(300).url()}
+                    width={300}
+                    height={300}
                     unoptimized={true}
                     alt='product-image'
                     className='product-detail-image'
@@ -30,17 +37,23 @@ export default function Images({ image, id }) {
 
             <div className='small-images-container'>
                 {image?.map((item, i) => (
-                    < Image
-                        src={urlFor(item).width(250).url()}
+                    <div
                         key={i}
-                        className={i === index ? 'small-image selected-image' : 'small-image'}
-                        width={250}
-                        height={250}
-                        alt='coursel-image'
-                        unoptimized={true}
-                        onMouseEnter={() => setIndex(i)} />
+                        className={`small-image ${i === index ? 'selected-image' : ''}`}
+                        onClick={() => handleImageClick(i)}
+                        onMouseEnter={() => handleImageHover(i)}
+                    >
+                        <Image
+                            src={urlFor(item).width(250).url()}
+                            key={i}
+                            className={i === index ? 'small-image selected-image' : 'small-image'}
+                            width={250}
+                            height={250}
+                            alt='coursel-image'
+                            unoptimized={true} />
+                    </div>
                 ))}
             </div>
         </>
-    )
-}
+    );
+};
