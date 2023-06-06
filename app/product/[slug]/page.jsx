@@ -1,9 +1,11 @@
 import React from 'react';
+import '../../globals.css';
 import Product from '../../components/Product';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { client } from '../../../lib/client';
 import Buttons from './components/Buttons';
 import Images from './components/Images';
+
 
 
 export default async function ProductDetails({ params: { slug } }) {
