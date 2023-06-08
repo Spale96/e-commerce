@@ -330,7 +330,6 @@ span.text-red {
     top: 0;
     z-index: 100;
     transition: all 1s ease-in-out;
-
 }
 
 .cart-container {
@@ -340,7 +339,6 @@ span.text-red {
     float: right;
     padding: 40px 10px;
     position: relative;
-
 }
 
 .footer-container {
@@ -354,7 +352,6 @@ span.text-red {
     align-items: center;
     gap: 10px;
     justify-content: center;
-
 }
 
 .footer-container .icons {
@@ -914,6 +911,11 @@ span.text-red {
 }
 
 @media screen and (min-width:300px) and (max-width: 600px) {
+    .cart-container {
+        width: 360px;
+    }
+
+
     .hero-banner-image {
         width: 250px;
         height: 41%;

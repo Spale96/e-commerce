@@ -18,7 +18,7 @@ import Image from 'next/image';
 const Cart = () => {
 
     const cartRef = useRef();
-    const { totalPrice, setTotalPrice, cartItems, setCartItems, setShowCart, totalQuantities, setTotalQuantities, decQty, incQty, qty } = useStateContext();
+    const { totalPrice, setTotalPrice, cartItems, setCartItems, setShowCart, totalQuantities, setTotalQuantities } = useStateContext();
 
     const handleCheckout = async () => {
         const stripe = await getStripe();
@@ -34,7 +34,6 @@ const Cart = () => {
         if (response.statusCode === 500) return;
 
         const data = await response.json();
-        console.log(data)
         toast.loading('Redirecting...');
 
         stripe.redirectToCheckout({ sessionId: data.id });
